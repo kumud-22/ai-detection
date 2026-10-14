@@ -8,7 +8,7 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import roboflowSdk from 'roboflow/inference-sdk';
+import roboflowSdk from '@roboflow/inference-sdk';
 import 'dotenv/config';
 
 // Load environment variables
