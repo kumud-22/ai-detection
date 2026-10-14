@@ -8,7 +8,7 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import { InferenceHTTPClient } from '@roboflow/inference-sdk';
+import roboflowSdk from 'roboflow/inference-sdk';
 import 'dotenv/config';
 
 // Load environment variables
@@ -17,6 +17,7 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 const isDev = process.env.NODE_ENV !== 'production';
+const { InferenceHTTPClient } = roboflowSdk;
 
 // Middleware
 app.use(cors());
